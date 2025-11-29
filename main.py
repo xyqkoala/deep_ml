@@ -14,8 +14,8 @@ def calculate_matrix_mean(matrix: list[list[float]], mode: str) -> list[float]:
 
 class TestDeepML(unittest.TestCase):
     def test_matrix_dot_vector(self):
-        a = [[1, 2, 3], [4, 5, 6]]
-        b = [7, 8, 9]
+        a = [[1.0, 2, 3], [4, 5, 6]]
+        b = [7.0, 8, 9]
         expected = [50, 122]
         result = matrix_dot_vector(a, b)
         self.assertEqual(result, expected, 'matrix dot vector')
@@ -23,7 +23,7 @@ class TestDeepML(unittest.TestCase):
 
         
     def test_calculate_matrix_mean(self):
-        matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+        matrix = [[1.0, 2, 3], [4, 5, 6], [7, 8, 9]]
         expected_column = [4.0, 5.0, 6.0]
         expected_row = [2.0, 5.0, 8.0]
         result_column = calculate_matrix_mean(matrix, 'column')
